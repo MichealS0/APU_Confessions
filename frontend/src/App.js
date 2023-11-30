@@ -1,21 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
+import ViewConfessions from './pages/confessions';
+import AddConfession from './pages/add';
+import UpdateConfession from './pages/update';
 
 function App() {
-  const [confession, setConfession] = useState(null);
-
-  useEffect(() => {
-    fetch('localhost:8800/ConfessionsMain')
-    .then((response) => response.json())
-    .then((data) => {
-      setConfession(data[0].confession);
-      console.log(data)
-    })
-    .catch((error) => console.log(error));
-  })
-
   return (
     <div>
-      <h1>{confession}</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<ViewConfessions />}/>
+          <Route path='/add' element={<AddConfession />} />
+          <Route path='/update' element={<UpdateConfession />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
