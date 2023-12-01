@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
+import Cards from '../components/Cards'
 
 const Confs = () =>{
   const [confessions, setConfession] = useState([])
@@ -21,12 +22,9 @@ const Confs = () =>{
 
 return (
   <div>
-    <div>
+    <div className=' p-2 flex gap-1 flex-wrap'>
       {confessions.map(confession=>(
-        <div>
-          <h1>{confession.Title}</h1>
-          <div>{confession.Description}</div>
-        </div>
+        <Cards ID={confessions.ID} Title={confession.Title} Description={confession.Description}/>
       ))}
     </div>
   </div>
