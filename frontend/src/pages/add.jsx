@@ -29,20 +29,20 @@ function AddConfession() {
   console.log(confession)
 
   return (
-    <div>
-      <h1>Add New Confession</h1>
-      <div className='background bg-orange-200'>
-        <ul>
-          <li>
+    <div className=' m-4 border-black border-2 rounded-md p-4'>
+      <h1 className=''>Add New Confession</h1>
+      <div className='background bg-orange-200 rounded-lg'>
+        <ul className=' p-2'>
+          <li className='p-1'>
            <p>Title</p>
-            <input type="text" placeholder='Title' onChange={handleChnage} name='title' />
+            <input type="text" placeholder='Title' onChange={handleChnage} name='title' className=' w-full h-10 border-black border-2 p-1 rounded-md hover:border-blue-400'/>
           </li>
-          <li>
+          <li className='p-1'>
             <p>Description</p>
-            <input type="text" placeholder='Description' onChange={handleChnage}name='description' />
+            <input type="text" placeholder='Description' onChange={handleChnage}name='description' className=' w-full h-10 border-black border-2 p-1 rounded-md hover:border-blue-400'/>
           </li>
-          <li>
-            <button onClick={handleClick}>Add Confession</button>     
+          <li className=' w-fit bg-white rounded-lg hover:bg-gray-300 duration-300'>
+            <button className='p-2' onClick={handleClick}>Add Confession</button>     
           </li>
         </ul>
       </div>
