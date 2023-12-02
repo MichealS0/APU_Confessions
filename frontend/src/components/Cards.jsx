@@ -1,11 +1,13 @@
 import React from 'react'
 
-function Cards({ID, Title, Description}) {
+function Cards({ID, Title, Description, CoverPhoto}) {
   return (
-    <div className=' max-w-md mx-auto max-h-lg my-auto bg-blue-400 rounded-xl p-2 hover:bg-blue-800 duration-200'>
-      <div className="">{ID}</div>
-      <h1 className=" font-bold text-4xl text-center p-2">{Title}</h1>
-      <div className=" p-2 text-center">{Description}</div>
+    <div className='h-fit bg-orange-300 w-1/4 rounded-md'>
+      <img className='p-2 rounded-xl' src="https://images.unsplash.com/photo-1682687982046-e5e46906bc6e?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Your Cover Pic" />
+      <div>{ID}</div>
+      <h1 className="w-fit font-bold text-xl px-2 py-1">{Title}</h1>
+      <div className="max-w-[75%] w-fit px-2 py-0 text-center h-[6rem]"><p className=''>{Description}</p></div>
+      <button className='bg-black rounded-md m-2'><p className='py-1 px-2 text-white'>Read More</p></button>
     </div>
   )
 }

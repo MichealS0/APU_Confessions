@@ -24,7 +24,7 @@ return (
   <div>
     <div className=' p-2 flex gap-1 flex-wrap'>
       {confessions.map(confession=>(
-        <Cards ID={confessions.ID} Title={confession.Title} Description={confession.Description}/>
+        <Cards ID={confessions.ID} Title={confession.Title} Description={confession.Description} CoverPhoto={confession.photo}/>
       ))}
     </div>
   </div>
