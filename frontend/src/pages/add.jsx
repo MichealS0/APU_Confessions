@@ -27,22 +27,20 @@ function AddConfession() {
     }
   }
 
-  console.log(confession)
-
   return (
     <div className=' m-4 border-black border-2 rounded-md p-4 max-w-[75%] mx-auto'>
-      <h1 className=''>Add New Confession</h1>
+      <h1 className=' p-2 mx-'>Add New Confession</h1>
       <div className='background bg-orange-200 rounded-lg'>
         <ul className=' p-2'>
           <li className='p-1'>
            <p>Title</p>
             <input type="text" placeholder='Title' onChange={handleChnage} name='title' className=' w-full h-10 border-black border-2 p-1 rounded-md hover:border-blue-400'/>
-            <p>Character Limit {confession.title.length} / 100</p>
+            <p className='text-xs text-right'>{confession.title.length} / 100</p>
           </li>
           <li className='p-1'>
             <p>Description</p>
             <input type="text" placeholder='Description' onChange={handleChnage}name='description' className=' w-full h-10 border-black border-2 p-1 rounded-md hover:border-blue-400'/>
-            <p>Character Limit {confession.description.length} / 500</p>
+            <p className=' text-xs text-right'>{confession.description.length} / 500</p>
           </li>
           <li className='p-1'>
             <p>Photo</p>
